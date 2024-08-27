@@ -1,9 +1,9 @@
 {
-    "name": "Covid-19 Stats UK",
+    "name": "Jalali Date Convertor",
     "version": "1.0.0",
-    "description": "latest covid data of UK",
+    "description": "Convert Jalali(Shamsi) date to Gregorian date and vice versa.",
     "manifest_version": 3,
-    "author": "Sampurna Chapagain",
+    "author": "Roohallah Alizadeh",
     "action":{
         "default_popup": "index.html",
         "default_title": "Latest Covid Report"
