@@ -1,6 +1,6 @@
 
-function CopyConvertedDate(selectedText) {
-    let inputDate = convertPersianNumber(selectedText);
+function CopyConvertedDate(inpu) {
+    let inputDate = convertPersianNumber(inpu);
     let _4char = inputDate.substring(0, 4);
     let year = parseInt(_4char);
     if (isNaN(year))
@@ -32,12 +32,6 @@ function copyToClipboard(text) {
 //     }
 // });
 
-function goToToday() {
-    const today = new Date();
-    const gDate = formatDate(today);
-    $("#txtGDate").val(gDate);
-    $("#txtJDate").val(gToJ(gDate));
-}
 function jToG(jDate) {
     const jDateArr = jDate.split(/[^0-9]/);
     const gDate = jalaali.jalaaliToDateObject(parseInt(jDateArr[0]), parseInt(jDateArr[1]), parseInt(jDateArr[2]));

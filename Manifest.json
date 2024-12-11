@@ -34,10 +34,10 @@
             ],
             "js": [
                 "jalaali-core.js",
-                "jalaali.min.js"
+                "js/jalaali.min.js"
             ],
             "css": [
-                "pages-styles.css"
+                "popup/styles.css"
             ],
             "run_at": "document_end"
         }

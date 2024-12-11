@@ -32,4 +32,10 @@ $(function () {
     });
 });
 
+function goToToday() {
+    const today = new Date();
+    const gDate = formatDate(today);
+    $("#txtGDate").val(gDate);
+    $("#txtJDate").val(gToJ(gDate));
+}
 
