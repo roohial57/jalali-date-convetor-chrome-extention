@@ -1,6 +1,6 @@
 
 function CopyConvertedDate(selectedText) {
-    let inputDate=convertArabicToPersian(selectedText);
+    let inputDate = convertPersianNumber(selectedText);
     let _4char = inputDate.substring(0, 4);
     let year = parseInt(_4char);
     if (isNaN(year))
@@ -56,7 +56,8 @@ function formatDate(date) {
 function showToast(msg) {
 
     const toast = document.createElement('div');
-    toast.className = 'jallali-toast jallali-toast-dark';
+    toast.classList = ['jallali-toast'];
+    toast.classList.add(isPageDark() ? 'jallali-toast-dark' : 'jallali-toast-light');
     toast.innerText = msg;
 
     document.body.appendChild(toast);
@@ -71,7 +72,7 @@ function showToast(msg) {
     setTimeout(() => {
         toast.style.opacity = 1;
     }, 100);
-    
+
     setTimeout(() => {
         toast.style.opacity = 0; // Fade out
         setTimeout(() => {
@@ -80,7 +81,7 @@ function showToast(msg) {
     }, 3000);
 }
 
-function convertArabicToPersian(arabicNumber) {
+function convertPersianNumber(arabicNumber) {
     const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
     const arabicDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
@@ -90,4 +91,19 @@ function convertArabicToPersian(arabicNumber) {
     }).join('');
 
     return persianNumber;
+}
+
+function isPageDark() {
+    const backgroundColor = window.getComputedStyle(document.body).backgroundColor;
+    const rgb = backgroundColor.match(/\d+/g); // Get RGB values
+    if (!rgb) return false; // Default to false if no color found
+
+    const r = parseInt(rgb[0]);
+    const g = parseInt(rgb[1]);
+    const b = parseInt(rgb[2]);
+
+    // Calculate brightness using a simple formula
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+    return brightness < 128; // A threshold can be adjusted according to needs
 }
