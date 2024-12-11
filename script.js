@@ -1,5 +1,4 @@
 
-
 $(function () {
     goToToday();
     $("#txtGDate").change(() => {
