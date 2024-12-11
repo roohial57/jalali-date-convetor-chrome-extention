@@ -34,6 +34,7 @@
             ],
             "js": [
                 "jalaali-core.js",
+                "popup/script.js",
                 "js/jalaali.min.js"
             ],
             "css": [
