@@ -4,8 +4,42 @@
     "description": "Convert Jalali(Shamsi) date to Gregorian date and vice versa.",
     "manifest_version": 3,
     "author": "Roohallah Alizadeh",
-    "action":{
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
         "default_popup": "index.html",
-        "default_title": "Latest Covid Report"
-    }
+        "default_title": "Jalali Date Convertor"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "jalaali-core.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "jalaali-core.js",
+                "jalaali.min.js"
+            ],
+            "css": [
+                "pages-styles.css"
+            ],
+            "run_at": "document_end"
+        }
+    ]
 }
