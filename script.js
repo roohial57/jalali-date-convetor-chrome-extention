@@ -29,6 +29,12 @@ $(function () {
     $("#btnToday").click(() => {
         goToToday();
     });
+    $("#btnJCopy").click(() => {
+        copyToClipboard($("#txtJDate").val());
+    });
+    $("#btnGCopy").click(() => {
+        copyToClipboard($("#txtGDate").val());
+    });
 });
 
 function goToToday() {
