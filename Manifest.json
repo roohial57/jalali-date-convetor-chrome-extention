@@ -16,13 +16,13 @@
         "service_worker": "background.js"
     },
     "action": {
-        "default_popup": "index.html",
+        "default_popup": "popup/index.html",
         "default_title": "Jalali Date Convertor"
     },
     "web_accessible_resources": [
         {
             "resources": [
-                "jalaali-core.js"
+                "js/jalaali-core.js"
             ],
             "matches": [
                 "http://*/*",
@@ -36,12 +36,12 @@
                 "<all_urls>"
             ],
             "js": [
-                "jalaali-core.js",
-                "popup/script.js",
+                "js/jalaali-core.js",
+                "selected-text/script.js",
                 "js/jalaali.min.js"
             ],
             "css": [
-                "popup/styles.css"
+                "selected-text/styles.css"
             ],
             "run_at": "document_end"
         }

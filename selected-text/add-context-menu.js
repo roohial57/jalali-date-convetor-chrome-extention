@@ -1,8 +1,8 @@
 try {
     importScripts(
       "js/jalaali.min.js",
-      "jalaali-core.js",
-      "popup/script.js"
+      "js/jalaali-core.js",
+      "selected-text/script.js"
     )
   }
   catch (err) {

@@ -1,6 +1,6 @@
 try {
     importScripts(
-      "popup/add-context-menu.js"
+      "selected-text/add-context-menu.js"
     )
   }
   catch (err) {
