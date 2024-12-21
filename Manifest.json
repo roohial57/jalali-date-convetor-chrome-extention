@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Jalali Date Convertor تبدیل تاریخ جلالی",
-    "version": "1.0.0",
+    "version": "1.0.5",
     "description": "Convert Jalali(Shamsi) date to Gregorian date and vice versa \n. جهت تبدیل تاریخ شمسی به میلادی و برعکس",
     "author": "Roohallah Alizadeh",
     "browser_specific_settings": {
